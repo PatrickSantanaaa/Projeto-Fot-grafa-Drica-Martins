@@ -67,7 +67,7 @@
             <p><span class="typed" style="color: white;">Fotógrafa</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <h2 style="color: white;">Drica Martins</h2>
             <div class="social-links">
-              <a href="#"><i style="color: white;" class="bi bi-whatsapp"></i></a>
+              <a href="#" id="whatsapp-button"><i style="color: white;" class="bi bi-whatsapp"></i></a>
               <a href="https://www.instagram.com/dricamartinsfotografia?igsh=MWs1NWtxeTJ2eTV1&utm_source=qr" target="_blank"><i style="color: white;" class="bi bi-instagram"></i></a>
             </div>
           </div>
@@ -319,7 +319,7 @@
               <i class="bi bi-whatsapp flex-shrink-0"></i>
               <div>
                 <h3>Whatsapp</h3>
-                <p>21 972637784</p>
+                <p>(21) 97263-7784</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -346,7 +346,7 @@
       <p>Obrigado por sua visita! Estamos prontos para capturar seus momentos especiais.</p>
       <div class="social-links d-flex justify-content-center">
         <a href="https://www.instagram.com/dricamartinsfotografia?igsh=MWs1NWtxeTJ2eTV1&utm_source=qr" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="" ><i class="bi bi-whatsapp"></i></a>
+        <a href="#" id="whatsapp-button"><i class="bi bi-whatsapp" id="whatsapp-button"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
@@ -383,6 +383,7 @@
   <script>
     // Substitua pelo seu número e mensagem codificada
     const telefone = '5521972637784';
+    const mensagem = 'Oi%21%20Estou%20entrando%20em%20contato%20pelo%20seu%20site%20porque%20estou%20interessado%20em%20contratar%20um%20servi%C3%A7o.%20Pode%20me%20dar%20mais%20detalhes%3F';
     const mensagemNewBorn = 'Ol%C3%A1%2C%20estou%20interessado%20no%20servi%C3%A7o%20de%20fotografia%20de%20beb%C3%AA%20newborn';
     const mensagemGestante = 'Ol%C3%A1%2C%20estou%20interessado%20em%20fotografia%20para%20gestantes%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.';
     const mensagemInfantil = 'Ol%C3%A1%2C%20estou%20interessado%20em%20fotografia%20infantil%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.';
@@ -408,12 +409,18 @@
       const url = `https://wa.me/${telefone}?text=${mensagemSmash}`;
       window.open(url, '_blank');
     }
+    // Função para redirecionar para o WhatsApp
+    function enviarMensagem() {
+      const url = `https://wa.me/${telefone}?text=${mensagem}`;
+      window.open(url, '_blank');
+    }
 
     // Adiciona um evento de clique ao botão
     document.getElementById('whatsapp-buttonNewBorn').addEventListener('click', enviarMensagemNewBorn);
     document.getElementById('whatsapp-buttonGestante').addEventListener('click', enviarMensagemGestante);
     document.getElementById('whatsapp-buttonInfantil').addEventListener('click', enviarMensagemInfantil);
     document.getElementById('whatsapp-buttonSmash').addEventListener('click', enviarMensagemSmash);
+    document.getElementById('whatsapp-button').addEventListener('click', enviarMensagem);
   </script>
 
   <!-- Main JS File -->
