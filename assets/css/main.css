@@ -803,6 +803,9 @@ section,
 .portfolio .portfolio-item {
   position: relative;
   overflow: hidden;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1458,7 +1461,7 @@ section,
 }
 
 .img-fluid{
-  height: 480px;
+  height: 450px;
   width: 100%;
   border-radius: 14px;
 }
